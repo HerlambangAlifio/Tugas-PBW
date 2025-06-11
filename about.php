@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT | INFORMATIKA</title>
-     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="about.css">
 </head>
 <body>
     <h1 align="center"> WEB INFORMATIKA 23</h1>
     <hr size="2px" color="red">
     <nav align="center">
-        <a href="index.html">HOME</a>|
-        <a href="profile.html">PROFILE</a>|
-        <a href="about.html">ABOUT AS</a> |
-        <a href="login.html">LOGIN</a> |
+       <a href="index.php">HOME</a>|
+        <a href="profile.php">PROFILE</a>|
+        <a href="about.php">ABOUT </a> |
+        <a href="login.php">LOGIN</a> |
+         <a href="belajarcss.php">BELAJARCSS</a> |
     </nav>
     <h2>Data mahasiswa informatika 2023 kelas B</h2>
     <table border="1" cellspacing="0" cellpadding="10px" >

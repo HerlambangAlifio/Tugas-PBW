@@ -12,11 +12,11 @@
     <h1 align="center"> WEB INFORMATIKA 23</h1>
     <hr size="2px" color="red">
     <nav align="center">
-        <a href="index.html">HOME</a>|
-        <a href="profile.html">PROFILE</a>|
-        <a href="about.html">ABOUT </a> |
-        <a href="login.html">LOGIN</a> |
-         <a href="belajarcss.html">BELAJARCSS</a> |
+        <a href="index.php">HOME</a>|
+        <a href="profile.php">PROFILE</a>|
+        <a href="about.php">ABOUT </a> |
+        <a href="login.php">LOGIN</a> |
+         <a href="belajarcss.php">BELAJARCSS</a> |
     </nav>
     <center>
     <img src="https://www.umn.ac.id/wp-content/uploads/2024/12/1-3-1200x675.jpg" width="500px" />
