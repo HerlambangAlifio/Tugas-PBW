@@ -1,52 +1,50 @@
 <?php
-
-  require 'function.php';
-
+    require 'function.php';
     $query = "SELECT * FROM mahasiswa";
-
-    $rows = query ($query);
-    /// Object
-
-    /// ambil data dai result
-
-    //while ( $mhs = mysqli_fetch_assoc($result))
-    //{
-      //  var_dump($mhs);
-    //} 
-
-
+    $rows = query($query);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Mahasiswa</title>
+    <title>DATA PEMAIN</title>
+    <link rel="stylesheet" href="index.css">
+    
 </head>
 <body>
-    <h1>Data mahasiswa </h1>
+    <h1>Data Mahasiswa </h1>
+    <a href="tambahdata.php">
+        <button style="margin-bottom: 12px; background-color: lightblue;">Tambah Data</button>
+    </a>
     
-    <table border="1" cellspacing="0" cellpadding="10">
+    <Table border="1px" cellspacing="0" cellpadding="12px">
         <tr>
-            <th>NO</th>
+            <th>No</th>
+            <th>Gambar</th>
             <th>Nama</th>
             <th>Nim</th>
             <th>Prodi</th>
-            <th>No.hp</th>
+            <th>No.hp</th>  
         </tr>
         <?php 
         $i = 1;
-       foreach ($rows as $mhs) { ?>
+        foreach ($rows as $pmn)  {?>
         <tr>
-            <td> <?= $i ?></td>
-              <td><img src="Image/<?= $mhs["foto"] ?>" width="100px"></td>
-            <td> <?= $mhs["nama"] ?></td>
-             <td> <?= $mhs["nim"] ?></td>
-            <td> <?= $mhs["prodi"] ?></td>
-             <td> <?= $mhs["Nohp"] ?></td>
+            <td><?= $i?></td>
+            <td><img src="image/<?= $pmn["foto"] ?>" width="60px"></td>
+            <td><?= $pmn["nama"] ?></td>
+            <td><?= $pmn["nim"] ?></td>
+            <td><?= $pmn["prodi"] ?></td>
+            <td><?= $pmn["Nohp"] ?></td>
+            <td><a href="hapusdata.php?id=<?= $pmn["id"] ?>">
+                    <button style="margin-bottom: 12px; background-color: lightblue;">Hapus</button>
+                </a>
+            </td>
         </tr>
-         <?php $i++;} ?>
-    </table>
+        <?php $i++; } ?>
+    </Table>
 </body>
 </html>
