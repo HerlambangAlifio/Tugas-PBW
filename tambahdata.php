@@ -40,6 +40,9 @@ if (isset($_POST['submit'])) {
 
         <label for="Nohp">No.hp : </label>
         <input type="text" name="Nohp" id="Nohp" required/><br>
+        
+        <label>foto</label>
+        <input type="file" name="foto"required/><br>
 
         <button type="submit" name="submit">Tambah Data</button>
     </form>
