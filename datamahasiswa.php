@@ -41,6 +41,8 @@
             <td><?= $pmn["Nohp"] ?></td>
             <td><a href="hapusdata.php?id=<?= $pmn["id"] ?>">
                     <button style="margin-bottom: 12px; background-color: lightblue;">Hapus</button>
+            <a href="ubahdata.php?id=<?= $pmn["id"] ?>">
+                    <button style="margin-bottom: 12px; background-color: lightblue;">Edit</button>
                 </a>
             </td>
         </tr>

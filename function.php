@@ -68,4 +68,36 @@ function hapusdata($id) {
     mysqli_query($koneksi, "DELETE FROM mahasiswa WHERE id = $id");
     return mysqli_affected_rows($koneksi);
 }
+
+function ubahdata($data, $id) {
+    global $koneksi;
+    $Nama = $data["nama"];
+    $Nim = $data["nim"];
+    $Prodi = $data["prodi"];
+    $Nohp = $data["Nohp"];
+
+    // cek apakah user memilih gambar baru atau tidak
+    if ($_FILES['foto']['error'] === 4) {
+        // jika tidak ada gambar yang diupload, tetap gunakan foto lama
+        $foto = query("SELECT foto FROM mahasiswa WHERE id = $id")[0]['foto'];
+    } else {
+        // jika ada gambar baru, upload dan ganti foto lama
+        $foto = upload();
+        if (!$foto) {
+            return 0; // upload gagal
+        }
+    }
+
+    $query = "UPDATE mahasiswa SET 
+              nama = '$Nama', 
+              nim = '$Nim', 
+              prodi = '$Prodi', 
+              Nohp = '$Nohp', 
+              foto = '$foto' 
+              WHERE id = $id";
+    
+    mysqli_query($koneksi, $query);
+    
+    return mysqli_affected_rows($koneksi);
+}
 ?>
